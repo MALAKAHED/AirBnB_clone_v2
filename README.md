@@ -155,13 +155,15 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 
 
 
+ 
 
-
-task 1 : test classes
+task 1 :
+     test classes
     test cases ideas :
         1. check value string, float, double
 
-task 2 : update do_creat 
+task 2 : 
+    update do_creat 
     نعرف اي ال key , value
     هنهدل الاسترينج : 
         ال starts with a double quote
@@ -177,5 +179,22 @@ task 3 , 4 :
     how to write a mysql server
 
 task 5 :
+    new method def delete(self, obj=None):
+    Update def all(self)
 
+task 6 :
+    new attributes
 
+Task 7 :
+    update sentax 
+
+Task 8 :
+    Update sentax
+
+Task 9 :
+    Update sentax
+
+Task 10 :
+    1 update sentax 
+    2 know how to make a relation with sql alchmey
+    3 add new attributes
