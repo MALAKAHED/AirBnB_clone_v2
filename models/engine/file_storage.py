@@ -9,14 +9,15 @@ class FileStorage:
     __objects = {}
 
     def all(self, cls=None):
-        """
-        Returns a dictionary of models currently in storage.
-        If a class is specified, returns objects of that class.
-        """
-        if cls:
-            # Filter objects by class
-            return {key: obj for key, obj in FileStorage.__objects.items() if isinstance(obj, cls)}
-        return FileStorage.__objects
+        """Returns a dictionary of models currently in storage"""
+        if cls is None:
+            return self.__objects
+        else:
+            filtered_dict = {}
+            for key, value in self.__objects.items():
+                if type(value) is cls:
+                    filtered_dict[key] = value
+            return filtered_dict
 
     def delete(self, obj=None):
             """Removes an object from the storage dictionary"""
