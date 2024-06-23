@@ -18,6 +18,13 @@ class FileStorage:
             return {key: obj for key, obj in FileStorage.__objects.items() if isinstance(obj, cls)}
         return FileStorage.__objects
 
+    def delete(self, obj=None):
+            """Removes an object from the storage dictionary"""
+            if obj is not None:
+                obj_key = obj.to_dict()['__class__'] + '.' + obj.id
+                if obj_key in self.__objects.keys():
+                    del self.__objects[obj_key]
+
     def new(self, obj):
         """Adds new object to storage dictionary"""
         self.all().update({obj.to_dict()['__class__'] + '.' + obj.id: obj})
@@ -55,14 +62,6 @@ class FileStorage:
         except FileNotFoundError:
             pass
 
-    def delete(self, obj=None):
-        """Deletes obj from __objects if it’s inside"""
-        if obj is not None:
-            # Generate the key for the object to be deleted
-            key = obj.to_dict()['__class__'] + '.' + obj.id
-            # Remove the object from __objects if it exists
-            if key in FileStorage.__objects:
-                del FileStorage.__objects[key]
     
     
     
