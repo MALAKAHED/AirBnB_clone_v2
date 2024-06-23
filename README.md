@@ -1,7 +1,7 @@
 our new readme file 
 
 
-Partner 1: amlnasser32@gmail.com, Email: amlnasser32@gmail.com
+Partner 1: Amlnasser7, Email: amlnasser32@gmail.com
 
 Partner 2: MALAKAHED, Email: lokamalek776@gmail.com
 
