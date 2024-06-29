@@ -57,11 +57,11 @@ class FileStorage:
             pass
 
     def delete(self, obj=None): 
-            """delete object"""
-            if obj is not None:
-                FileStorage.__objects.pop(
-                    obj.to_dict()['__class__'] + '.' + obj.id)
-                self.save()
+        """delete object"""
+        if obj is not None:
+            FileStorage.__objects.pop(
+                obj.to_dict()['__class__'] + '.' + obj.id)
+            self.save()
 
     def close(self):
         """close method"""
